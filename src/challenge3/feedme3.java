@@ -15,21 +15,21 @@ public class feedme3 {
 
         //Prompt user for input while i is less than 3.
         int i = 0;
-        while (sc.Next())
-        {
-            System.out.println("Respond end when done. Please enter dinner option #" + (i + 1));
+        do {
+            System.out.println("Please enter dinner option #" + (i + 1));
             String answer = sc.nextLine();
             Dinner.add(answer);
             i++;
-        }
 
-        //Randomizing the arraylist to print output
-        Random r = new Random();
-        {
-            int randomitem = r.nextInt(Dinner.size());
-            String randomElement = Dinner.get(randomitem);
-            System.out.println("Random Element = " + randomElement);
-        }
+            if (Dinner.contains("end")) ;
+                break;
 
+            //Randomizing the arraylist to print output
+            Random r = new Random();
+            {
+                int randomitem = r.nextInt(Dinner.size());
+                String randomElement = Dinner.get(randomitem);
+                System.out.println("Dinner tonight = " + randomElement);
+            }
     }
 }
