@@ -22,14 +22,21 @@ public class feedme3 {
             i++;
 
             if (Dinner.contains("end")) ;
-                break;
+            break;
 
             //Randomizing the arraylist to print output
             Random r = new Random();
-            {
-                int randomitem = r.nextInt(Dinner.size());
-                String randomElement = Dinner.get(randomitem);
-                System.out.println("Dinner tonight = " + randomElement);
+            String language = "y";
+            String language = "n";
+
+            do {
+                System.out.println("Would you like a new result? (y/n)");
+                String answer = sc.nextLine();
+                if (language == "y") {
+                    int randomitem = r.nextInt(Dinner.size());
+                    String randomElement = Dinner.get(randomitem);
+                    System.out.println("Dinner tonight = " + randomElement);
+                } else break;
             }
-    }
+        }
 }
