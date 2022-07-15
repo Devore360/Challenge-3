@@ -13,30 +13,32 @@ public class feedme3 {
         //Making new Scanner class object, stored in the variable input
         Scanner sc = new Scanner(System.in);
 
-        //Prompt user for input while i is less than 3.
+        //Prompt user for input.
         int i = 0;
-        do {
-            System.out.println("Please enter dinner option #" + (i + 1));
-            String answer = sc.nextLine();
-            Dinner.add(answer);
-            i++;
 
-            if (Dinner.contains("end")) ;
-            break;
+        System.out.println("Type \"End\" when done.");
 
-            //Randomizing the arraylist to print output
-            Random r = new Random();
-            String language = "y";
-            String language = "n";
-
-            do {
-                System.out.println("Would you like a new result? (y/n)");
+        while (!Dinner.contains("end") && (!Dinner.contains("End")))
+        {
+            if (!Dinner.contains("end") && (!Dinner.contains("End")))
+                System.out.println("Please enter dinner option #" + (i + 1));
                 String answer = sc.nextLine();
-                if (language == "y") {
-                    int randomitem = r.nextInt(Dinner.size());
-                    String randomElement = Dinner.get(randomitem);
-                    System.out.println("Dinner tonight = " + randomElement);
-                } else break;
+                Dinner.add(answer);
+                i++;
+                }
+
+        //Remove "End" from the arraylist so it doesn't output with food options.
+        Dinner.remove("end");
+        Dinner.remove("End");
+
+        //Randomizing the arraylist to print output
+        Random r = new Random();
+            {
+                int randomitem = r.nextInt(Dinner.size());
+                String randomElement = Dinner.get(randomitem);
+                System.out.println("Dinner tonight = " + randomElement);
             }
-        }
+        System.out.println("Would you like to roll again? y/n")";
+        while (!sc.equals("y"))
+    }
 }
