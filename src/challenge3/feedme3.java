@@ -18,14 +18,13 @@ public class feedme3 {
 
         System.out.println("Type \"End\" when done.");
 
-        while (!Dinner.contains("end") && (!Dinner.contains("End")))
-        {
+        while (!Dinner.contains("end") && (!Dinner.contains("End"))) {
             if (!Dinner.contains("end") && (!Dinner.contains("End")))
                 System.out.println("Please enter dinner option #" + (i + 1));
-                String answer = sc.nextLine();
-                Dinner.add(answer);
-                i++;
-                }
+            String answer = sc.nextLine();
+            Dinner.add(answer);
+            i++;
+        }
 
         //Remove "End" from the arraylist so it doesn't output with food options.
         Dinner.remove("end");
@@ -33,12 +32,15 @@ public class feedme3 {
 
         //Randomizing the arraylist to print output
         Random r = new Random();
-            {
-                int randomitem = r.nextInt(Dinner.size());
-                String randomElement = Dinner.get(randomitem);
-                System.out.println("Dinner tonight = " + randomElement);
-            }
-        System.out.println("Would you like to roll again? y/n")";
-        while (!sc.equals("y"))
+        Scanner YesNo = new Scanner(System.in);
+        String yesno = YesNo.next();
+
+        while (yesno.equals("y") && (yesno.equals("Y"))) ;
+        {
+            int randomitem = r.nextInt(Dinner.size());
+            String randomElement = Dinner.get(randomitem);
+            System.out.println("Dinner tonight = " + randomElement);
+            System.out.println("Would you like to roll again? y/n");
+        }
     }
 }
