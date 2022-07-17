@@ -18,9 +18,9 @@ public class feedme3 {
 
         System.out.println("Type \"End\" when done.");
 
-        while (!Dinner.contains("end") && (!Dinner.contains("End"))) {
-            if (!Dinner.contains("end") && (!Dinner.contains("End")))
-                System.out.println("Please enter dinner option #" + (i + 1));
+        while (!Dinner.contains("end") && (!Dinner.contains("End")))
+        {
+            System.out.println("Please enter dinner option #" + (i + 1));
             String answer = sc.nextLine();
             Dinner.add(answer);
             i++;
