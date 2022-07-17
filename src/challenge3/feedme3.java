@@ -31,7 +31,10 @@ public class feedme3 {
         Dinner.remove("end");
         Dinner.remove("End");
 
+        //Jon can you explain this to me?
         String answer;
+
+        //do while Loop allowing random re-roll
         do
         {
             int randomitem = r.nextInt(Dinner.size());
