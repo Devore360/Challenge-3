@@ -27,20 +27,19 @@ public class feedme3 {
         }
 
         //Remove "End" from the arraylist so it doesn't output with food options.
+        Random r = new Random();
         Dinner.remove("end");
         Dinner.remove("End");
 
-        //Randomizing the arraylist to print output
-        Random r = new Random();
-        Scanner YesNo = new Scanner(System.in);
-        String yesno = YesNo.next();
-
-        while (yesno.equals("y") && (yesno.equals("Y"))) ;
+        String answer;
+        do
         {
             int randomitem = r.nextInt(Dinner.size());
             String randomElement = Dinner.get(randomitem);
             System.out.println("Dinner tonight = " + randomElement);
             System.out.println("Would you like to roll again? y/n");
+            answer = sc.next();
         }
+        while (answer.equalsIgnoreCase("y"));
     }
 }
